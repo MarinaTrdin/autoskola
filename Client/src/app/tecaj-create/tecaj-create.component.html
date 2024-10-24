@@ -1,0 +1,58 @@
+<div class="container" style="margin-top: 100px">
+  <div class="row mb-5">
+    <div class="col-12">
+      <h1 class="text-center">Spremi novi tečaj</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8 offset-2">
+      <form #djelatnikEditForm="ngForm" (ngSubmit)="spremi()">
+        <fieldset>
+          <legend>Popunite sve podatke</legend>
+          <div>
+            <label for="naziv" class="form-label mt-4">Naziv</label>
+            <input
+              name="naziv"
+              [(ngModel)]="tecaj.naziv"
+              type="text"
+              class="form-control"
+              id="naziv"
+            />
+          </div>
+          <div>
+            <label for="trajanje" class="form-label mt-4">Trajanje</label>
+            <input
+              name="trajanje"
+              [(ngModel)]="tecaj.trajanje"
+              type="text"
+              class="form-control"
+              id="trajanje"
+            />
+          </div>
+          <div>
+            <label for="cijena" class="form-label mt-4">Cijena</label>
+            <input
+              name="cijena"
+              [(ngModel)]="tecaj.cijena"
+              type="text"
+              class="form-control"
+              id="cijena"
+            />
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary mt-2" style="width: 100%">
+          Spremi
+        </button>
+        <button
+          routerLink="/tecajevi"
+          type="button"
+          class="btn btn-danger mt-2"
+          style="width: 100%"
+        >
+          Nazad
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
